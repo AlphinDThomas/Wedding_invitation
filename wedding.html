@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Nikhil &amp; Parvathy | Wedding Invitation</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-container": "#554300",
+            "on-secondary-fixed-variant": "#574144",
+            "primary-fixed-dim": "#e9c349",
+            "on-error": "#ffffff",
+            "outline-variant": "#d0c5af",
+            "on-error-container": "#93000a",
+            "on-tertiary-container": "#45463d",
+            "outline": "#7f7663",
+            "on-secondary": "#ffffff",
+            "secondary-fixed": "#fbdbde",
+            "surface-container-low": "#f6f3f2",
+            "tertiary-fixed": "#e4e3d7",
+            "surface-container-highest": "#e5e2e1",
+            "surface-variant": "#e5e2e1",
+            "surface": "#fcf9f8",
+            "inverse-surface": "#313030",
+            "error": "#ba1a1a",
+            "inverse-on-surface": "#f3f0ef",
+            "on-surface-variant": "#4d4635",
+            "surface-bright": "#fcf9f8",
+            "tertiary": "#5e5f56",
+            "on-primary": "#ffffff",
+            "primary": "#735c00",
+            "tertiary-container": "#b3b3a8",
+            "primary-fixed": "#ffe088",
+            "secondary-fixed-dim": "#debfc2",
+            "surface-tint": "#735c00",
+            "secondary": "#70585b",
+            "secondary-container": "#f8d8db",
+            "on-secondary-fixed": "#281719",
+            "surface-dim": "#dcd9d9",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#1c1b1b",
+            "error-container": "#ffdad6",
+            "on-secondary-container": "#755d5f",
+            "on-tertiary-fixed-variant": "#46473f",
+            "surface-container": "#f0eded",
+            "surface-container-high": "#eae7e7",
+            "on-tertiary-fixed": "#1b1c15",
+            "on-primary-fixed-variant": "#574500",
+            "tertiary-fixed-dim": "#c7c7bc",
+            "inverse-primary": "#e9c349",
+            "on-tertiary": "#ffffff",
+            "on-background": "#1c1b1b",
+            "primary-container": "#d4af37",
+            "on-primary-fixed": "#241a00",
+            "background": "#fcf9f8"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter": "24px",
+            "section-gap": "160px",
+            "margin-mobile": "24px",
+            "unit": "8px",
+            "margin-desktop": "80px",
+            "container-max": "1200px"
+          },
+          "fontFamily": {
+            "body-md": ["Montserrat"],
+            "body-lg": ["Montserrat"],
+            "display-lg": ["Playfair Display"],
+            "label-caps": ["Montserrat"],
+            "headline-sm": ["Playfair Display"],
+            "display-lg-mobile": ["Playfair Display"],
+            "headline-md": ["Playfair Display"]
+          },
+          "fontSize": {
+            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300" }],
+            "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "600" }],
+            "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+            "display-lg-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "700" }],
+            "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(115, 92, 0, 0.2);
+    }
+
+    .gold-shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gold-shimmer::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg,
+          transparent,
+          rgba(233, 195, 73, 0.1),
+          transparent);
+      transform: rotate(45deg);
+      animation: shimmer 4s infinite;
+    }
+
+    @keyframes shimmer {
+      0% {
+        transform: translateX(-100%) rotate(45deg);
+      }
+
+      100% {
+        transform: translateX(100%) rotate(45deg);
+      }
+    }
+
+    .parallax-bg {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .bokeh-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      background-image: radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.03) 0%, transparent 25%);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md selection:bg-primary/20">
+  <!-- Bokeh Particles Simulation -->
+  <div class="bokeh-overlay"></div>
+  <!-- Navigation (TopAppBar Shared Component) -->
+  <header
+    class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl dark:bg-surface-dim/60 border-b border-primary/10 shadow-sm">
+    <div class="flex justify-between items-center px-gutter py-4 w-full max-w-container-max mx-auto">
+      <div class="font-display-lg-mobile text-headline-md tracking-tighter text-primary dark:text-primary-fixed-dim">
+        Nikhil &amp; Parvathy
+      </div>
+      <nav class="hidden md:flex gap-8 items-center">
+        <a class="text-on-surface-variant font-label-caps hover:text-primary transition-colors duration-300"
+          href="#story">Our Story</a>
+        <a class="text-on-surface-variant font-label-caps hover:text-primary transition-colors duration-300"
+          href="#events">Events</a>
+        <a class="text-on-surface-variant font-label-caps hover:text-primary transition-colors duration-300"
+          href="#gallery">Gallery</a>
+        <a class="text-primary font-bold border-b border-primary pb-1 font-label-caps" href="#rsvp">RSVP</a>
+      </nav>
+      <div class="flex items-center gap-4 text-primary dark:text-primary-fixed-dim">
+        <button
+          class="material-symbols-outlined hover:bg-primary-container/10 transition-all duration-500 p-2 rounded-full"
+          data-icon="music_note">music_note</button>
+      </div>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="relative h-screen flex flex-col justify-center items-center text-center overflow-hidden" id="home">
+    <div class="absolute inset-0 z-0">
+      <img alt="Wedding Venue" class="w-full h-full object-cover"
+        data-alt="A cinematic, wide-angle photograph of a premium outdoor wedding venue at golden hour. Soft amber sunlight filters through ancient willow trees, illuminating a pristine white aisle lined with delicate floral arrangements in ivory and blush pink. The atmosphere is ethereal and romantic, with a sophisticated palette of champagne gold and soft cream colors, creating a timeless heirloom aesthetic."
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPAU1yzcpXWogJxGinQWxq8h3FoPGzJXHd_WS3Gfec-PyXXPhDLDJgNvMjf9dTurYwLhaLQ2-ANR1a5Oh_zu01NkVqFPlcVePnrG8EbhTJDjbi4t9Vf3mUBY5vos0PseMrT9-0oBeNDepaPdh64UpP97K_SrGIWxI6732Lkd9Nl6ibc5IC1TWIjMXGII1pd7EOpzp2tQCYPzkejwY6utvt6hXhCkoQZbnD3FEzpVaBqXWjJAwKQ-TrY13KHXhjpWvUU_MggSNSbvU" />
+      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-background"></div>
+    </div>
+    <div class="relative z-10 space-y-6 max-w-3xl px-gutter">
+      <p class="font-label-caps text-label-caps text-white/90 tracking-[0.5em] mb-2 uppercase">Together with their
+        families</p>
+      <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white drop-shadow-xl">
+        Nikhil <span class="font-headline-sm italic">Weds</span> Parvathy
+      </h1>
+      <div class="w-16 h-[1px] bg-primary-fixed mx-auto"></div>
+      <p class="font-headline-sm text-headline-sm text-white/90 italic">
+        "Two souls, one heart, and a lifetime of love together."
+      </p>
+      <p class="font-label-caps text-label-caps text-white tracking-[0.3em] font-bold">DECEMBER 12TH, 2024</p>
+    </div>
+    <div
+      class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 animate-bounce opacity-70">
+      <span class="font-label-caps text-[10px] text-white tracking-widest">SCROLL</span>
+      <span class="material-symbols-outlined text-white" data-icon="expand_more">expand_more</span>
+    </div>
+  </section>
+  <!-- Our Story Section -->
+  <section class="py-section-gap px-gutter max-w-container-max mx-auto overflow-hidden" id="story">
+    <div class="text-center mb-24">
+      <h2 class="font-display-lg text-headline-md md:text-display-lg text-primary mb-4">Our Story</h2>
+      <div class="w-24 h-[2px] bg-primary-container mx-auto"></div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-20 items-center">
+      <div class="relative">
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-secondary-container/30 rounded-full blur-3xl z-0"></div>
+        <img alt="Our Story First Date"
+          class="relative z-10 w-full aspect-[4/5] object-cover rounded-lg shadow-2xl border border-outline-variant/20"
+          data-alt="A portrait of a young couple laughing together in a sun-drenched garden setting. The lighting is warm and cinematic, emphasizing natural skin tones and the soft textures of their elegant attire. Surrounded by lush greenery and delicate white flowers, the mood is one of pure joy and intimate connection, captured in a modern, luxury lifestyle photography style."
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO5pB7oHnvpwpRloVdKod8R9IWoE5UxRTavr717igpEoCcZws7V4Hg7ydmg3uO2NBUlRJxtOLPsF7rLhsHnVDfDkTkoNsxyYQxubImis1CV_x4eNJAhdLx7bi6uJwcUfFUw7PNlCLx6Pus6v2VPJ3w4C-1ex0MmUK_ZMoGlHqWybC7mRMkK_G64dzcTd4Vp0eVSD1rLjP2XThr9JckEQmKdsrdR9_i38LiDqqAM-mqm841SmFVV1UxwB9TfOZihFLOQYAbyFKcAJo" />
+      </div>
+      <div class="space-y-8">
+        <p class="font-label-caps text-label-caps text-primary tracking-widest">CHAPTER I</p>
+        <h3 class="font-headline-md text-headline-md text-on-surface">The First Spark</h3>
+        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          It started with a shared coffee and a conversation that lasted until the stars claimed the sky. We found in
+          each other a mirror for our dreams and a sanctuary for our hearts.
+        </p>
+        <div class="pt-8 border-t border-outline-variant/30 flex items-center gap-4">
+          <span class="font-headline-sm italic text-secondary">October 2020</span>
+          <div class="flex-grow h-[1px] bg-outline-variant/30"></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-20 items-center mt-32 md:flex-row-reverse">
+      <div class="md:order-2">
+        <img alt="Proposal"
+          class="w-full aspect-[4/5] object-cover rounded-lg shadow-2xl border border-outline-variant/20"
+          data-alt="A close-up photograph of an elegant engagement ring resting on a velvet cushion. The ring is a classic solitaire diamond set in champagne gold, catching the warm light of a nearby candle. The background is softly blurred with golden bokeh, creating a sense of luxury, prestige, and quiet anticipation. The color palette is rich with deep charcoal, gold, and soft white tones."
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Ug_CDluIkfpVJBg6gamAjxAXIiHCo1iae0K2HZAakF025yx3qGqzmivwu-Ezpljcdtv5_CLhtAZv4FAUAF1kiznDJIOVwVfEIIaaL2oYja3CBgflcxJ_MQ0ni0HJiGQnh7BSuEGL7zILCemCqUl9i-6aoYwJh2Qi-YGfl2hDvNIuVNYKTnB9J-MveLzRSQMeiCHy2ylYdAyrOLH3JCLPA9IhQZAGckOsQJw_139VZP3tP8YWCLpS-eAZ_simSH09coy0uMDuv7c" />
+      </div>
+      <div class="space-y-8 md:order-1">
+        <p class="font-label-caps text-label-caps text-primary tracking-widest">CHAPTER II</p>
+        <h3 class="font-headline-md text-headline-md text-on-surface">The Yes</h3>
+        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Under the ancient archways of our favorite retreat, words were spoken that changed our forever. A simple 'yes'
+          that echoed through our souls, marking the beginning of this beautiful journey.
+        </p>
+        <div class="pt-8 border-t border-outline-variant/30 flex items-center gap-4">
+          <div class="flex-grow h-[1px] bg-outline-variant/30"></div>
+          <span class="font-headline-sm italic text-secondary">January 2023</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Wedding Details Section -->
+  <section class="py-section-gap relative bg-surface-container-low/30 overflow-hidden" id="events">
+    <div class="max-w-container-max mx-auto px-gutter relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="font-display-lg text-headline-md text-primary mb-4">Wedding Details</h2>
+        <p class="font-body-md text-on-surface-variant max-w-md mx-auto">We can't wait to celebrate this milestone with
+          our closest friends and family.</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8">
+        <!-- Date Card -->
+        <div
+          class="glass-card p-10 rounded-xl text-center group hover:border-primary/50 transition-all duration-500 gold-shimmer">
+          <span class="material-symbols-outlined text-primary text-4xl mb-6"
+            data-icon="calendar_today">calendar_today</span>
+          <h4 class="font-label-caps text-label-caps text-on-surface-variant mb-4">THE DATE</h4>
+          <p class="font-headline-sm text-on-surface">Dec 12, 2024</p>
+          <p class="font-body-md text-on-surface-variant mt-2 italic">Thursday Morning</p>
+        </div>
+        <!-- Time Card -->
+        <div class="glass-card p-10 rounded-xl text-center group hover:border-primary/50 transition-all duration-500">
+          <span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="schedule">schedule</span>
+          <h4 class="font-label-caps text-label-caps text-on-surface-variant mb-4">THE TIME</h4>
+          <p class="font-headline-sm text-on-surface">10:30 AM</p>
+          <p class="font-body-md text-on-surface-variant mt-2 italic">Followed by Lunch</p>
+        </div>
+        <!-- Venue Card -->
+        <div class="glass-card p-10 rounded-xl text-center group hover:border-primary/50 transition-all duration-500">
+          <span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="location_on">location_on</span>
+          <h4 class="font-label-caps text-label-caps text-on-surface-variant mb-4">THE VENUE</h4>
+          <p class="font-headline-sm text-on-surface">The Heritage Grand</p>
+          <p class="font-body-md text-on-surface-variant mt-2 italic">Royal Ballroom</p>
+        </div>
+        <!-- Dress Code Card -->
+        <div class="glass-card p-10 rounded-xl text-center group hover:border-primary/50 transition-all duration-500">
+          <span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="checkroom">checkroom</span>
+          <h4 class="font-label-caps text-label-caps text-on-surface-variant mb-4">DRESS CODE</h4>
+          <p class="font-headline-sm text-on-surface">Black Tie</p>
+          <p class="font-body-md text-on-surface-variant mt-2 italic">Traditional or Formal</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Location Section -->
+  <section class="py-section-gap px-gutter max-w-container-max mx-auto">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <h2 class="font-display-lg text-headline-md text-primary">Location</h2>
+        <p class="font-body-lg text-on-surface-variant leading-relaxed">
+          The Heritage Grand is located in the heart of the city, known for its timeless architecture and majestic
+          gardens. Complimentary valet parking will be available for all our guests.
+        </p>
+        <div class="p-6 bg-surface-container rounded-lg border border-outline-variant/30">
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary mt-1" data-icon="pin_drop">pin_drop</span>
+            <div>
+              <p class="font-body-md font-bold text-on-surface">The Heritage Grand</p>
+              <p class="font-body-md text-on-surface-variant">123 Emerald Avenue, Palace District</p>
+              <p class="font-body-md text-on-surface-variant">Bangalore, KA 560001</p>
+            </div>
+          </div>
+        </div>
+        <a class="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-label-caps tracking-widest rounded-full hover:bg-on-primary-container transition-all duration-300 shadow-xl shadow-primary/20 group"
+          href="#">
+          OPEN IN GOOGLE MAPS
+          <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform"
+            data-icon="arrow_forward">arrow_forward</span>
+        </a>
+      </div>
+      <div class="h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl border border-outline-variant/30">
+        <img alt="Location Map" class="w-full h-full object-cover grayscale opacity-80"
+          data-alt="A stylized, architectural map detail of a luxury urban district. The image is presented in a minimalist, cinematic style with a soft grayscale and gold overlay. It highlights clean lines of roads and elegant building footprints, suggesting a prestigious and sophisticated location. The mood is calm and organized, utilizing high-contrast lighting to create a modern digital art aesthetic."
+          data-location="Bangalore"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_4UCb-daOqVQs9oj61DRp5oH5RSjm5dAdQfh-vRgJ70xqKJ__KLgHqByXwRkzZOwCCSYI07PkPas336zfmpruKnE4q9GCJgvgAQ6EizdiKFbZfQtDVV1Lo9b269BALN4ikNTeehvdny9BGn-2pqH8FSPhFLKxnxuVHoWg37B220xetNEzBfXC79FzdmZFNIPrivEAmdZnStxewqnsEb3ujKoYq0dbXSTdoQseHE5dLtcIRJQXYem3iOEMCcaR2-5PKadM-oGJkYI" />
+      </div>
+    </div>
+  </section>
+  <!-- Memories Gallery Section -->
+  <section class="py-section-gap bg-inverse-surface text-white" id="gallery">
+    <div class="max-w-container-max mx-auto px-gutter">
+      <div class="text-center mb-16">
+        <p class="font-label-caps text-label-caps text-primary-fixed-dim tracking-[0.4em] mb-4">VISUALS OF LOVE</p>
+        <h2 class="font-display-lg text-headline-md md:text-display-lg">Memories</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="aspect-[3/4] overflow-hidden rounded-lg group cursor-pointer relative">
+          <img alt="Couple Portrait"
+            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            data-alt="A cinematic, high-fashion portrait of a couple in formal wedding attire standing in a dimly lit, historic ballroom. Warm rim lighting from hidden lamps creates a golden glow around their silhouettes. The bride's lace gown is detailed and elegant, while the groom's deep charcoal suit adds a classic weight. The mood is intimate, prestigious, and timeless."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMwvu38SRe2BzB0NfR8-8bz2NQz-VE4yK7NGjNuuPTJDp58Y3XAf4xFuQ0vHF4YZA1fjiw2UC3Y3NpzxJguDh5yW8VwduICnRhMrjk96YlQgqon3P0abkFQA3Qq5fcS5ELyK148wG9lpLhwoOxKCmyFUuxOzo3p-5bLsf8f9VZN5Ei5AbIhY3MFzZYqDwEsqKQWUK3Z7YPlCxqOQBjr-F7IXl6P3g3Rpaiys52cKHCg6Y_F0tQ513kJ_O67RbCyjCiFolPD5OHtSU" />
+          <div
+            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+            <span class="font-label-caps text-white border border-white/50 px-4 py-2">THE COUPLE</span>
+          </div>
+        </div>
+        <div class="aspect-[3/4] overflow-hidden rounded-lg group cursor-pointer relative">
+          <img alt="Floral Detail"
+            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            data-alt="A soft-focus, cinematic close-up of delicate floral table centerpieces featuring ivory roses and blush peonies. The lighting is bright and high-key, creating a clean, modern aesthetic. Crystal glassware and gold-rimmed plates catch the diffused light, simulating the warmth of candlelight in an upscale wedding setting. The palette is dominated by soft whites and golds."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4PLyyuo_9dHK-UyrCz27XqxIbYNFx_z_8Pf0Uk7WDZt7ljPR9YRGRXDywxUuyet2_gtFcozOUrxA8C3xE-wPy3n3mR1CPQP1p-PvcG2P-4ip8vPQV3G04DEIIAoTCoH9quD-vsbGyonnLmEZSCpaSQPs5_i_PWWUj958ML0mF7RvVRZtybNuNCcvhFAp2R6KZ7I1T6sSCqJmudJODV0rcqqN9m8Aot7071CMr4yQlgHyBpDCmr9jG-z4BaOU1U_gbM8nZLVyeTcI" />
+          <div
+            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+            <span class="font-label-caps text-white border border-white/50 px-4 py-2">FLORALS</span>
+          </div>
+        </div>
+        <div class="aspect-[3/4] overflow-hidden rounded-lg group cursor-pointer relative md:mt-8">
+          <img alt="Venue Grandeur"
+            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            data-alt="A wide, cinematic shot of a beautifully decorated wedding aisle during a Parisian sunset. Soft pink and orange hues fill the sky, reflecting off the white chairs and gold accents. The Eiffel Tower is visible in the distant soft-focus background, adding a sense of grandeur and romance. The lighting is warm and hazy, evoking a dream-state heirloom aesthetic."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzf0S0-yJldwpTkXI3ZasuFsGMKDPOApef2ZNMRWcZBFjJOI3gmqB1hZHvkOXLO-mhcDvr_qzpwMlPCIYspeYVAxy7K5TuXyoxWQulHPte9dujpV5f3kVRC_J1EzAPziryRrmWkliJyM8UwSQA-xvzB3Q6-Cdcyv1RwjzhDi2Ua9FZjIh45jIaU1uyt2Ik2dbSZ-eWTFo3KXUh3dEg-GYq1V7nC-B9b5ZhNffWZtfSMwmyeoDs3zenf9xsx0Mw5XbXuqYzuRlMN6g" />
+          <div
+            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+            <span class="font-label-caps text-white border border-white/50 px-4 py-2">THE VENUE</span>
+          </div>
+        </div>
+        <div class="aspect-[3/4] overflow-hidden rounded-lg group cursor-pointer relative md:mt-8">
+          <img alt="Celebration"
+            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            data-alt="An artistic, motion-blurred shot of wedding guests celebrating on a dance floor under cascading gold confetti and warm spotlights. The image captures the dynamic energy and joy of the celebration with fluid motion and soft-fade transitions. The color palette is vibrant yet sophisticated, featuring deep blacks, sparkling golds, and flashes of celebratory white light."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVrmFSSMuAEW5d7Rs3SwyzfYq1hZNaNKRC15pnhKVEiVA_l6gdCtwosg4_IUATHsB6x_hTcy2uD4Lx4Wh4GCYE8dDJbap-icEN9OVGaRX4UGkhxEMSK-Ip45RZ39tj81C4oS9CdKzkzZPXQ9Lm1WaFF6V0iqcc5YKyN4hFOul2YIfcKXilZqT5-iGnYKeQJG0zjq8YtdwypMP7mcBGhHnjYPsliM69ckYZaQ9DDx1ZXZ4x7LAUOTKDsw7cjylWrENECH8VZc3Z938" />
+          <div
+            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+            <span class="font-label-caps text-white border border-white/50 px-4 py-2">CELEBRATION</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- RSVP Section -->
+  <section class="py-section-gap px-gutter relative flex items-center justify-center min-h-[819px]" id="rsvp">
+    <div class="absolute inset-0 z-0">
+      <img alt="RSVP Background" class="w-full h-full object-cover opacity-10"
+        data-alt="A high-contrast, minimalist background of elegant, embossed wedding invitation cards on premium Ivory paper. The texture of the paper is highly detailed, showing a subtle grain and gold-foil letterpress details. The lighting is dramatic with deep shadows, creating a sense of luxury and importance. The overall aesthetic is clean, modern, and high-end."
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmUXuWYLB50ONPTLSW3qSW22DY2JeEWPOPlBEv5W3Pc2aJXuCjGoqPhYbdoM-T81SjIG9g1g_JxAltelwrvW4tejKyB6gi71WyhPRw32PCoIF-13bhOMMgFE2IjbZc8ODc6gbN3Tpx6n-PiAD1S1V-QS62Uc2jiMBZwVURpaw6srLlVdwDoEIiiJvvHdcoOUEhDaL6zKNldGR82JNHQ3BinUnneKdYt-h5Sxj8_4EpgYd4tL71qcq5o61BN-YgWYAGIPp6ihVtDKE" />
+    </div>
+    <div class="glass-card max-w-2xl w-full p-12 md:p-16 rounded-2xl relative z-10 shadow-2xl border-white/40">
+      <div class="text-center mb-12">
+        <p class="font-label-caps text-label-caps text-primary tracking-widest mb-4">RESERVE YOUR SEAT</p>
+        <h2 class="font-display-lg text-headline-md text-on-surface">Will you attend?</h2>
+      </div>
+      <form class="space-y-10">
+        <div class="relative group">
+          <input
+            class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-colors peer placeholder-transparent"
+            id="name" placeholder="Full Name" required="" type="text" />
+          <label
+            class="absolute left-0 top-4 text-on-surface-variant font-label-caps transition-all duration-300 peer-placeholder-shown:text-body-md peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-label-caps peer-focus:text-primary"
+            for="name">FULL NAME</label>
+        </div>
+        <div class="space-y-4">
+          <p class="font-label-caps text-label-caps text-on-surface-variant">YOUR ATTENDANCE</p>
+          <div class="flex flex-wrap gap-4">
+            <label class="flex-1 min-w-[200px]">
+              <input class="hidden peer" name="attendance" type="radio" value="yes" />
+              <div
+                class="w-full text-center p-4 border border-outline-variant rounded-lg cursor-pointer transition-all duration-300 peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary hover:border-primary group">
+                <span class="font-body-md">Yes, I will attend ❤️</span>
+              </div>
+            </label>
+            <label class="flex-1 min-w-[200px]">
+              <input class="hidden peer" name="attendance" type="radio" value="no" />
+              <div
+                class="w-full text-center p-4 border border-outline-variant rounded-lg cursor-pointer transition-all duration-300 peer-checked:bg-secondary peer-checked:text-white peer-checked:border-secondary hover:border-secondary">
+                <span class="font-body-md">Sorry, I can't make it 😔</span>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="relative group">
+          <textarea
+            class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-colors peer placeholder-transparent"
+            id="message" placeholder="Message to the couple" rows="3"></textarea>
+          <label
+            class="absolute left-0 top-4 text-on-surface-variant font-label-caps transition-all duration-300 peer-placeholder-shown:text-body-md peer-placeholder-shown:top-4 peer-focus:-top-4 peer-focus:text-label-caps peer-focus:text-primary"
+            for="message">MESSAGE FOR THE COUPLE</label>
+        </div>
+        <button
+          class="w-full py-5 bg-inverse-surface text-white font-label-caps tracking-widest rounded-lg hover:bg-primary transition-all duration-500 shadow-xl shadow-black/20 gold-shimmer"
+          type="submit">
+          SEND RSVP
+        </button>
+      </form>
+    </div>
+  </section>
+  <!-- Footer Shared Component -->
+  <footer class="w-full py-section-gap bg-surface dark:bg-surface-dim border-t border-outline-variant/30">
+    <div class="flex flex-col items-center justify-center gap-unit w-full px-margin-desktop text-center">
+      <div class="font-headline-sm text-headline-sm text-primary mb-2">Nikhil &amp; Parvathy</div>
+      <div class="flex gap-6 mb-8">
+        <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps"
+          href="#story">Our Story</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps"
+          href="#events">Venue</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps"
+          href="#">Registry</a>
+      </div>
+      <p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim italic">"With Love, Nikhil &amp;
+        Parvathy — 2024"</p>
+      <div class="mt-12 flex flex-col items-center gap-4">
+        <span class="material-symbols-outlined text-primary text-3xl" data-icon="favorite"
+          style="font-variation-settings: 'FILL' 1;">favorite</span>
+        <p class="font-label-caps text-[10px] text-outline tracking-widest">DESIGNED FOR FOREVER</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Initial Loading Overlay -->
+  <div
+    class="fixed inset-0 z-[100] bg-surface flex flex-col items-center justify-center transition-opacity duration-1000"
+    id="loading-screen">
+    <div class="relative">
+      <div class="absolute inset-0 flex items-center justify-center animate-pulse">
+        <div class="w-48 h-48 rounded-full border border-primary/20 border-dashed animate-spin-[20s]"></div>
+      </div>
+      <div class="relative text-center space-y-4">
+        <div class="font-display-lg text-primary text-6xl drop-shadow-sm">N &amp; P</div>
+        <div class="w-12 h-[1px] bg-primary mx-auto"></div>
+        <p class="font-label-caps text-[10px] text-on-surface-variant tracking-[0.5em] animate-pulse">LOADING ETERNITY
+        </p>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Simple loading hide logic
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loading-screen');
+      setTimeout(() => {
+        loader.style.opacity = '0';
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 1000);
+      }, 1500);
+    });
+
+    // Smooth scroll reveal observer simulation
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section > div').forEach(el => {
+      el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+      observer.observe(el);
+    });
+  </script>
+</body>
+
+</html>
