@@ -131,3 +131,41 @@ document.querySelectorAll("section > div").forEach((el) => {
   );
   observer.observe(el);
 });
+
+// Countdown Timer Logic
+const countdown = () => {
+  const countDate = new Date("December 12, 2026 10:30:00").getTime();
+  const now = new Date().getTime();
+  const gap = countDate - now;
+
+  if (gap < 0) {
+    document.getElementById("days").innerText = "00";
+    document.getElementById("hours").innerText = "00";
+    document.getElementById("mins").innerText = "00";
+    document.getElementById("secs").innerText = "00";
+    return;
+  }
+
+  const second = 1000;
+  const minute = second * 60;
+  const hour = minute * 60;
+  const day = hour * 24;
+
+  const d = Math.floor(gap / day);
+  const h = Math.floor((gap % day) / hour);
+  const m = Math.floor((gap % hour) / minute);
+  const s = Math.floor((gap % minute) / second);
+
+  const daysEl = document.getElementById("days");
+  const hoursEl = document.getElementById("hours");
+  const minsEl = document.getElementById("mins");
+  const secsEl = document.getElementById("secs");
+
+  if (daysEl) daysEl.innerText = d < 10 ? "0" + d : d;
+  if (hoursEl) hoursEl.innerText = h < 10 ? "0" + h : h;
+  if (minsEl) minsEl.innerText = m < 10 ? "0" + m : m;
+  if (secsEl) secsEl.innerText = s < 10 ? "0" + s : s;
+};
+
+setInterval(countdown, 1000);
+countdown(); // initial call
