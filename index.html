@@ -10,7 +10,7 @@
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
     <link
@@ -87,54 +87,57 @@
         <img
           alt="Wedding Venue"
           class="w-full h-full object-cover"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPAU1yzcpXWogJxGinQWxq8h3FoPGzJXHd_WS3Gfec-PyXXPhDLDJgNvMjf9dTurYwLhaLQ2-ANR1a5Oh_zu01NkVqFPlcVePnrG8EbhTJDjbi4t9Vf3mUBY5vos0PseMrT9-0oBeNDepaPdh64UpP97K_SrGIWxI6732Lkd9Nl6ibc5IC1TWIjMXGII1pd7EOpzp2tQCYPzkejwY6utvt6hXhCkoQZbnD3FEzpVaBqXWjJAwKQ-TrY13KHXhjpWvUU_MggSNSbvU"
+          src="hero-bg.png"
         />
         <div
-          class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-background"
+          class="absolute inset-0 bg-white/20 backdrop-blur-[2px]"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-background"
         ></div>
       </div>
-      <div class="relative z-10 space-y-6 max-w-3xl px-gutter">
+      <div class="relative z-10 space-y-6 max-w-4xl px-gutter pt-12">
         <p
-          class="font-label-caps text-label-caps text-white/90 tracking-[0.5em] mb-2 uppercase"
+          class="font-label-caps text-label-caps text-on-surface-variant tracking-[0.5em] mb-4 uppercase"
         >
           Together with their families
         </p>
         <h1
-          class="font-display-lg text-display-lg-mobile md:text-display-lg text-white drop-shadow-xl"
+          class="font-accent-script text-7xl md:text-[140px] leading-tight text-primary drop-shadow-md mb-2"
         >
-          Nikhil <span class="font-headline-sm italic">Weds</span> Parvathy
+          Nikhil & Parvathy
         </h1>
-        <div class="w-16 h-[1px] bg-primary-fixed mx-auto"></div>
-        <p class="font-headline-sm text-headline-sm text-white/90 italic">
+        <div class="w-32 h-[1px] bg-primary/40 mx-auto my-6"></div>
+        <p class="font-display-lg text-headline-sm text-on-surface-variant italic">
           "Two souls, one heart, and a lifetime of love together."
         </p>
         <p
-          class="font-label-caps text-label-caps text-white tracking-[0.3em] font-bold"
+          class="font-label-caps text-label-caps text-primary tracking-[0.4em] font-bold mt-8"
         >
           DECEMBER 12TH, 2026
         </p>
 
         <!-- Countdown Timer -->
-        <div class="flex flex-wrap justify-center gap-2 md:gap-4 mt-8 w-full max-w-3xl mx-auto" id="countdown">
-          <div class="p-3 md:p-5 rounded-lg min-w-[70px] md:min-w-[90px] text-center border border-white/30 bg-white/20 backdrop-blur-md shadow-lg">
-            <div class="text-3xl md:text-4xl font-display-lg text-white drop-shadow-md" id="days">00</div>
-            <div class="text-[10px] font-label-caps text-primary-fixed-dim mt-1 md:mt-2 tracking-[0.2em] uppercase">Days</div>
+        <div class="flex flex-wrap justify-center gap-3 md:gap-6 mt-12 w-full max-w-3xl mx-auto" id="countdown">
+          <div class="p-4 md:p-6 rounded-2xl min-w-[80px] md:min-w-[110px] text-center border border-white/60 bg-white/50 backdrop-blur-md shadow-[0_8px_32px_rgba(204,166,119,0.15)]">
+            <div class="text-4xl md:text-5xl font-display-lg text-primary drop-shadow-sm" id="days">00</div>
+            <div class="text-[10px] md:text-xs font-label-caps text-on-surface-variant mt-2 tracking-[0.2em] uppercase font-bold">Days</div>
           </div>
-          <div class="p-3 md:p-5 rounded-lg min-w-[70px] md:min-w-[90px] text-center border border-white/30 bg-white/20 backdrop-blur-md shadow-lg">
-            <div class="text-3xl md:text-4xl font-display-lg text-white drop-shadow-md" id="hours">00</div>
-            <div class="text-[10px] font-label-caps text-primary-fixed-dim mt-1 md:mt-2 tracking-[0.2em] uppercase">Hours</div>
+          <div class="p-4 md:p-6 rounded-2xl min-w-[80px] md:min-w-[110px] text-center border border-white/60 bg-white/50 backdrop-blur-md shadow-[0_8px_32px_rgba(204,166,119,0.15)]">
+            <div class="text-4xl md:text-5xl font-display-lg text-primary drop-shadow-sm" id="hours">00</div>
+            <div class="text-[10px] md:text-xs font-label-caps text-on-surface-variant mt-2 tracking-[0.2em] uppercase font-bold">Hours</div>
           </div>
-          <div class="p-3 md:p-5 rounded-lg min-w-[70px] md:min-w-[90px] text-center border border-white/30 bg-white/20 backdrop-blur-md shadow-lg">
-            <div class="text-3xl md:text-4xl font-display-lg text-white drop-shadow-md" id="mins">00</div>
-            <div class="text-[10px] font-label-caps text-primary-fixed-dim mt-1 md:mt-2 tracking-[0.2em] uppercase">Mins</div>
+          <div class="p-4 md:p-6 rounded-2xl min-w-[80px] md:min-w-[110px] text-center border border-white/60 bg-white/50 backdrop-blur-md shadow-[0_8px_32px_rgba(204,166,119,0.15)]">
+            <div class="text-4xl md:text-5xl font-display-lg text-primary drop-shadow-sm" id="mins">00</div>
+            <div class="text-[10px] md:text-xs font-label-caps text-on-surface-variant mt-2 tracking-[0.2em] uppercase font-bold">Mins</div>
           </div>
-          <div class="p-3 md:p-5 rounded-lg min-w-[70px] md:min-w-[90px] text-center border border-white/30 bg-white/20 backdrop-blur-md shadow-lg">
-            <div class="text-3xl md:text-4xl font-display-lg text-white drop-shadow-md" id="secs">00</div>
-            <div class="text-[10px] font-label-caps text-primary-fixed-dim mt-1 md:mt-2 tracking-[0.2em] uppercase">Secs</div>
+          <div class="p-4 md:p-6 rounded-2xl min-w-[80px] md:min-w-[110px] text-center border border-white/60 bg-white/50 backdrop-blur-md shadow-[0_8px_32px_rgba(204,166,119,0.15)]">
+            <div class="text-4xl md:text-5xl font-display-lg text-primary drop-shadow-sm" id="secs">00</div>
+            <div class="text-[10px] md:text-xs font-label-caps text-on-surface-variant mt-2 tracking-[0.2em] uppercase font-bold">Secs</div>
           </div>
         </div>
 
-        <button class="mt-8 px-10 py-4 bg-gradient-to-b from-white/90 to-white/70 backdrop-blur-md text-primary font-label-caps tracking-widest rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.4)] hover:bg-white transition-all duration-300 border border-white/50 uppercase text-xs font-bold text-on-surface">
+        <button class="mt-12 px-12 py-4 bg-primary text-white font-label-caps tracking-widest rounded-full shadow-[0_10px_30px_rgba(204,166,119,0.3)] hover:bg-primary-container hover:text-primary transition-all duration-500 uppercase text-xs font-bold border border-primary/20 hover:scale-105">
           SAVE THE DATE
         </button>
       </div>
